@@ -1,10 +1,6 @@
-<%-- 
-    Document   : Alumno
-    Created on : 29/05/2016, 02:14:59 PM
-    Author     : alan32
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@taglib prefix="s" uri="/struts-tags"%>
+
 <!DOCTYPE html>
 <html>
     <head>

@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tiempo de generación: 29-05-2016 a las 20:33:10
+-- Tiempo de generación: 05-06-2016 a las 21:16:56
 -- Versión del servidor: 10.1.13-MariaDB
 -- Versión de PHP: 7.0.6
 
@@ -17,7 +17,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `Base`
+-- Base de datos: `BaseGeolitic`
 --
 
 -- --------------------------------------------------------
@@ -28,7 +28,7 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `admin` (
   `idAdmin` int(11) NOT NULL,
-  `user_idUser` int(3) NOT NULL
+  `user_idUser` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -39,7 +39,7 @@ CREATE TABLE `admin` (
 
 CREATE TABLE `alumno` (
   `Boleta` int(11) NOT NULL,
-  `grupos_Grupo` int(10) NOT NULL
+  `grupos_Grupo` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -51,7 +51,7 @@ CREATE TABLE `alumno` (
 CREATE TABLE `funcion` (
   `Numfun` int(11) NOT NULL,
   `funcion` varchar(45) NOT NULL,
-  `grupos_Grupo` int(10) NOT NULL
+  `grupos_Grupo` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -83,16 +83,26 @@ CREATE TABLE `profesor` (
 --
 
 CREATE TABLE `user` (
-  `idUser` int(10) NOT NULL DEFAULT '1',
+  `idUser` varchar(30) NOT NULL DEFAULT '0',
   `name` varchar(30) NOT NULL,
   `ApPat` varchar(30) NOT NULL,
   `ApMat` varchar(30) NOT NULL,
-  `Age` int(3) NOT NULL,
-  `Sex` varchar(1) NOT NULL,
+  `Age` varchar(10) NOT NULL,
+  `Sex` varchar(10) NOT NULL,
   `username` varchar(30) NOT NULL,
   `pass` varchar(30) NOT NULL,
-  `Rol` int(11) NOT NULL DEFAULT '3'
+  `Rol` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Volcado de datos para la tabla `user`
+--
+
+INSERT INTO `user` (`idUser`, `name`, `ApPat`, `ApMat`, `Age`, `Sex`, `username`, `pass`, `Rol`) VALUES
+('2013601590', 'Armando Alan', 'Hernandez', 'Sanchez', '22', 'M', 'alan3211', 'alan', 1),
+('2013601591', 'Maria', 'Manrique', 'Hernandez', '23', 'F', 'Mary11', '123', 2),
+('2013741480', 'Administrator', 'administrator', 'Administrator', '22', 'M', 'administrator', 'admin', 3),
+('2015634584', 'Ruben', 'Peredo', 'Valderrama', '45', 'M', 'ruben', 'rpv', 1);
 
 -- --------------------------------------------------------
 
@@ -101,7 +111,7 @@ CREATE TABLE `user` (
 --
 
 CREATE TABLE `user_has_alumno` (
-  `user_idUser` int(10) NOT NULL,
+  `user_idUser` varchar(30) NOT NULL,
   `alumno_Boleta` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -112,7 +122,7 @@ CREATE TABLE `user_has_alumno` (
 --
 
 CREATE TABLE `user_has_profesor` (
-  `user_idUser` int(10) NOT NULL,
+  `user_idUser` varchar(30) NOT NULL,
   `profesor_NumProf` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
