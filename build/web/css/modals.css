@@ -20,7 +20,7 @@ textarea { resize: none; }
 	-moz-border-radius-topright: 5px;
 }
 .modal-has-primary {
-	background-color: #D9534F;
+	background-color: #303f9f;
 	border-top-left-radius: 5px;
 	border-top-right-radius: 5px;
 	-webkit-border-top-left-radius: 5px;
