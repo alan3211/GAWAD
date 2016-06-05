@@ -1,9 +1,3 @@
-<%-- 
-    Document   : Administrador
-    Created on : 5/06/2016, 12:58:14 PM
-    Author     : alan32
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
