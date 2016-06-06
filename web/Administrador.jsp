@@ -157,10 +157,10 @@
                                     <div class="col-md-7">
                                         <input type="password" class="form-control" name="pass" id="pass" placeholder="Ingresa contraseña">
                                         <h6><span id="pass01" class="hidden glyphicon form-control-feedback"></span></h6>
-                                        <h6><span id="pass02" class="text-center help-block hidden"></span></h6>
+                                        <h6><span id="pass02" class="text-center help-block hidden"></span></h6>                                                                                                                      
                                     </div>
-                                </div>                            
-                                <s:submit cssClass="btn btn-info" value="Registrar"></s:submit>
+                                      <s:submit cssClass="btn btn-info" value="Registrar"></s:submit>
+                                </div>                                
                             </s:form>
                         </div>
                         <div class="modal-footer modal-has-primary">
@@ -171,6 +171,9 @@
                         </div>
                     </div>
                 </div>
-            </div>                   
+            </div>
+            <footer>
+                <p class="text-center">@GAWAD::2016 &COPY;Copyright Todos los derechos Reservados</p>                                
+            </footer>
     </body>
 </html>

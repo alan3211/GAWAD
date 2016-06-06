@@ -244,13 +244,8 @@ function cerrarsesion(){
          title: "Cerrando Sesion",   
          text: "Hasta pronto!!",   
          timer: 3000,   
-         showConfirmButton: false });    
-        var salir = document.getElementById('salir');
-        salir.innerHTML = "<% session.removeAttribute('nombre');\n\
-                              session.removeAtribute('pass'); \n\
-                           %>";
-        setTimeout ("redireccionar()",1000);
-        
+         showConfirmButton: false });            
+        setTimeout ("redireccionar()",1000);        
 }
 
 function redireccionar(){
