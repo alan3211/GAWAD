@@ -258,7 +258,7 @@ function redireccionar(){
 } 
 
 function agregarva(){
-       var nombres = false, contrasenas = false, tipo = false, ages = false, users = false,boletas = false,roles = false;
+       var nombres = false, contrasenas = false, tipo = false, ages = false, users = false,boletas = false;
         var nombre = $("#nombre").val();
         var appat = $("#appat").val();
         var apmat = $("#apmat").val();
@@ -266,9 +266,7 @@ function agregarva(){
         var sexo = $('input[name=sexo]:checked', '#RegistraLogin').val();
         var edad = $("#edad").val();
         var username = $("#username").val();
-        var pass = $("#pass").val();
-        var repass = $("#repcontra").val();
-        var rol = $("[name = 'roles']").val();
+        var pass = $("#pass").val();                
                function valname(name) {
                 var ts = /^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð -]+$/u;
                         return ts.test(name);
@@ -417,38 +415,15 @@ function agregarva(){
         $("#Pass1").attr("class", "form-group has-feedback has-error");
                 $("#pass01").attr("class", "glyphicon glyphicon-remove form-control-feedback");
                 $("#pass02").removeClass("hidden");
+                $("#pass02").text("El formato de contraseña no puede estar vacio.");
                 contrasenas = false;
-                }if (repass == ""){
-        $("#Pass2").attr("class", "form-group has-feedback has-error");
-                $("#repass01").attr("class", "glyphicon glyphicon-remove form-control-feedback");
-                $("#repass02").removeClass("hidden");
-                $("#repass02").text("El campo contraseña  no puede estar vacío");
-                contrasenas = false;
-                } else if (pass != repass){
-        $("#Pass1").attr("class", "form-group has-feedback has-error");
-                $("#pass01").attr("class", "glyphicon glyphicon-remove form-control-feedback");
-                $("#pass02").removeClass("hidden");
-                $("#Pass2").attr("class", "form-group has-feedback has-error");
-                $("#repass01").attr("class", "glyphicon glyphicon-remove form-control-feedback");
-                $("#repass02").removeClass("hidden");
-                $("#repass02").text("Las contraseñas no coinciden");
-                contrasenas = false;
-                } else{
-                   $("#Pass1").attr("class", "form-group has-feedback has-success");
-                   $("#pass01").attr("class", "glyphicon glyphicon-ok form-control-feedback");
-                $("#pass02").addClass("hidden");
-                $("#Pass2").attr("class", "form-group has-feedback has-success");
-                $("#repass01").attr("class", "glyphicon glyphicon-ok form-control-feedback");
-                $("#repass02").addClass("hidden");
-                contrasenas = true;
-                }
-                if(rol == -1){
-                    $("#Rol").attr("class", "form-group has-feedback has-error");                    
                 }else{
-                    $("#Rol").attr("class", "form-group has-feedback has-success");
-                    roles = true;
-                }
-        if (nombres && tipo && ages && users && contrasenas && boletas && roles){                        
+                $("#Pass1").attr("class", "form-group has-feedback has-success");
+                $("#pass01").attr("class", "glyphicon glyphicon-ok form-control-feedback");
+                $("#pass02").addClass("hidden");                                
+                contrasenas = true;
+                }               
+        if (nombres && tipo && ages && users && contrasenas && boletas){                        
                 return true;
         }else{        
         swal("huy...existen errores", "Revisa que no hallan errores","error");                

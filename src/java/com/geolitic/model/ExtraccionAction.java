@@ -25,11 +25,8 @@ public class ExtraccionAction extends ActionSupport {
 		hibernateSession = HibernateUtil.getSessionFactory().openSession();
 		hibernateSession.beginTransaction();
 	
-		usuarios = (ArrayList<User>) hibernateSession.createQuery("from user").list();
-		if(usuarios.isEmpty())
-			return null;
-		else
-			return "tabla";
+		usuarios = (ArrayList<User>) hibernateSession.createQuery("from User").list();
+		return "tabla";
     }
 	        
 }

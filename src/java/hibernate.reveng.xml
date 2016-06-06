@@ -4,3 +4,4 @@
   <schema-selection match-catalog="BaseGeolitic"/>
   <table-filter match-name="user"/>
 </hibernate-reverse-engineering>
+

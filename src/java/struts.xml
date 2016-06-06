@@ -11,7 +11,7 @@
             <interceptor-ref name="cookie"></interceptor-ref>
             <interceptor-ref name="cookieProvider"></interceptor-ref>
             <interceptor-ref name="defaultStack"></interceptor-ref>            
-            <result name="Administrador">/Administrador.jsp</result>
+            <result name="Administrador" type="redirectAction">ExtraccionAction</result>
             <result name="Profesor">/Profesor.jsp</result>
             <result name="Alumno">/Alumno.jsp</result>
             <result name="Fracaso">/Error.jsp</result>
@@ -20,5 +20,18 @@
             <result name="ExitoRegistro">/Exito.jsp</result>            
             <result name="Fallo">/Fallo.jsp</result>            
         </action>                                 
+        <action name="AgregaAction" class="com.geolitic.model.AgregaAction">            
+            <result name="Agregado" type="redirectAction">ExtraccionAction</result>            
+            <result name="Fallo">/Fallo.jsp</result>            
+        </action>                                       
+        <action name="ExtraccionAction" class="com.geolitic.model.ExtraccionAction" method="usuarios">
+	    <result name="tabla">/Administrador.jsp</result>
+	</action>
+        <action name="Eliminar" class="com.geolitic.model.Eliminar" method="eliminar">
+            <result name="eliminado" type="redirectAction">ExtraccionAction</result>
+	</action>
+        <action name="Modificar" class="com.geolitic.model.Modificar" method="modificar">
+            <result name="datos">/Administrador.jsp</result>
+	</action>
     </package>    
 </struts>

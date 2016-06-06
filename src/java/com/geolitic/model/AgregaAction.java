@@ -16,10 +16,9 @@ public class AgregaAction extends ActionSupport {
     private String sexo;
     private String edad;
     private String username;
-    private String pass;    
-    private int roles;
+    private String pass;        
     private Session hibernateSession;    
-    private ArrayList<User> usuarios;
+    private ArrayList<User> usuarios;   
 
     public ArrayList<User> getUsuarios() {
         return usuarios;
@@ -100,15 +99,7 @@ public class AgregaAction extends ActionSupport {
     public void setPass(String pass) {
         this.pass = pass;
     }
-
-    public int getRol() {
-        return roles;
-    }
-
-    public void setRol(int rol) {
-        this.roles = rol;
-    }
-            
+              
     @Override
     public String execute() throws Exception {        
       
@@ -125,7 +116,7 @@ public class AgregaAction extends ActionSupport {
         user0.setAge(edad);
         user0.setUsername(username);
         user0.setPass(pass);
-        user0.setRol(roles);
+        user0.setRol(3);
         hibernateSession.save(user0);
         t0.commit();        
         return "Agregado";    

@@ -8,6 +8,6 @@
     <property name="hibernate.connection.username">root</property>
     <property name="hibernate.connection.password">admin</property>
     <property name="hibernate.connection.pool_size">20</property>
-    <mapping resource="com/geolitic/hibernate/User.hbm.xml"/>
-  </session-factory>
+    <mapping resource="com/geolitic/hibernate/User.hbm.xml"/>            
+  </session-factory>  
 </hibernate-configuration>

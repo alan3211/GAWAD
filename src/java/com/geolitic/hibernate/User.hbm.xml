@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
-<!-- Generated 4/06/2016 11:32:32 PM by Hibernate Tools 4.3.1 -->
+<!-- Generated 5/06/2016 05:20:14 PM by Hibernate Tools 4.3.1 -->
 <hibernate-mapping>
-    <class name="com.geolitic.hibernate.User" table="user" catalog="BaseGeolitic" optimistic-lock="version">
+    <class name="com.geolitic.hibernate.User" table="user" catalog="BaseGeolitic">
         <id name="idUser" type="string">
             <column name="idUser" length="30" />
             <generator class="assigned" />

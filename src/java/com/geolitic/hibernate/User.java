@@ -1,5 +1,5 @@
 package com.geolitic.hibernate;
-// Generated 4/06/2016 11:32:32 PM by Hibernate Tools 4.3.1
+// Generated 5/06/2016 05:20:12 PM by Hibernate Tools 4.3.1
 
 
 
