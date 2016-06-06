@@ -3,7 +3,6 @@ package com.geolitic.model;
 import com.geolitic.hibernate.HibernateUtil;
 import com.geolitic.hibernate.User;
 import com.opensymphony.xwork2.ActionSupport;
-import java.util.ArrayList;
 import org.hibernate.Session;
 
 public class Modificar extends ActionSupport {

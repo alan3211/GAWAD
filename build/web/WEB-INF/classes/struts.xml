@@ -31,7 +31,7 @@
             <result name="eliminado" type="redirectAction">ExtraccionAction</result>
 	</action>
         <action name="Modificar" class="com.geolitic.model.Modificar" method="modificar">
-            <result name="datos">/Administrador.jsp</result>
+            <result name="datos">/ModificarUser.jsp</result>
 	</action>
     </package>    
 </struts>

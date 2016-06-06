@@ -20,7 +20,7 @@
                     $("#myModal").modal();
                 });
             });
-        </script>
+        </script>       
     </head>
     <body>
         <div class="container">            
@@ -64,7 +64,7 @@
                             <td colspan="2">
                                 <s:if test="rol==1">Administrador</s:if>
                                 <s:elseif test="rol==2">Profesor</s:elseif>
-                                <s:else>Alumno</s:else>                                                            
+                                <s:elseif test="rol==3">Alumno</s:elseif>                                                            
                             </td>                                
                             <td><s:url action='Modificar' var="urlMod">
                                 <s:param name="idUser" value="idUser"></s:param>
@@ -171,6 +171,6 @@
                         </div>
                     </div>
                 </div>
-            </div>          
+            </div>                   
     </body>
 </html>
