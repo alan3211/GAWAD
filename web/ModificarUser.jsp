@@ -121,16 +121,15 @@
                             <p class="lead" style="margin-left:40px;">* Campos Obligatorios</p>   
                             <div class="col-md-offset-6">                                                   
                                 <input type="submit" class="btn btn-primary" value="Enviar" id="btn_enviar1" style="height: 45px; width: 150px; font-size: 23px;"/>
-                                <input type="button" class="btn btn-primary" value="Cancelar" id="cancelar" onclick="limpiar();" style="height: 45px; width: 150px; font-size: 23px; margin-left:30px;"/>
+                                <a class="btn btn-primary" id="cancelar" href="ExtraccionAction.action" style="height: 45px; width: 150px; font-size: 23px; margin-left:30px;">Cancelar</a>
                             </div>
-                        </div>
-                        
+                        </div>                          
                     </form>
                 </div>                
             </div>
             <br>
             <footer>
-                <p class="text-center">@GAWAD::2016 &COPY;Copyright Todos los derechos Reservados<br><a href="acercade.html" style="color: #FFF; text-decoration: underline;">Acerca de la aplicación web</a></p>                                
+                <p class="text-center">@GAWAD::2016 &COPY;Copyright Todos los derechos Reservados</p>                                
             </footer>
         </div>
     </body>
