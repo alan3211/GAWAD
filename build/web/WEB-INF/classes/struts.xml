@@ -33,5 +33,8 @@
         <action name="Modificar" class="com.geolitic.model.Modificar" method="modificar">
             <result name="datos">/ModificarUser.jsp</result>
 	</action>
+        <action name="ActualizaAction" class="com.geolitic.model.ActualizaAction" method="actualizar">
+            <result name="actualizado" type="redirectAction">ExtraccionAction</result>
+	</action>
     </package>    
 </struts>

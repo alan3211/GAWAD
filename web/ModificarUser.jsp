@@ -109,7 +109,7 @@
                         <div class="form-group" id="Rol">
                             <label for="roles" class="control-label col-md-4 lead">* Rol:</label>
                             <div class="col-md-7">
-                                <select name="rol" class="form-control">
+                                <select name="roles" class="form-control">
                                     <option value="-1">Seleccione un rol</option>                                    
                                     <option value="1">Administrador</option>                                    
                                     <option value="2">Profesor</option>                                    

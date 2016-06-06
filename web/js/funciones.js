@@ -610,3 +610,4 @@ function actualizava(){
         swal("huy...existen errores", "Revisa que no hallan errores","error");                
         return false;
     }
+}
