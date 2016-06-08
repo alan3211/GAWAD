@@ -36,5 +36,15 @@
         <action name="ActualizaAction" class="com.geolitic.model.ActualizaAction" method="actualizar">
             <result name="actualizado" type="redirectAction">ExtraccionAction</result>
 	</action>
+        <action name="rectaAction" class="com.geolitic.model.rectaAction">
+            <result name="figura">recta1.jsp</result>
+            
+        </action> 
+        <action name="circunferenciaAction" class="com.geolitic.model.circunferenciaAction">
+            <result name="figura1">circunferencia1.jsp</result>
+        </action> 
+         <action name="parabolaAction" class="com.geolitic.model.parabolaAction">
+            <result name="figura2">parabola1.jsp</result>
+         </action>
     </package>    
 </struts>
