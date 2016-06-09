@@ -12,8 +12,8 @@
             <interceptor-ref name="cookieProvider"></interceptor-ref>
             <interceptor-ref name="defaultStack"></interceptor-ref>            
             <result name="Administrador" type="redirectAction">ExtraccionAction</result>
-            <result name="Profesor">/Profesor.jsp</result>
-            <result name="Alumno">/Alumno.jsp</result>
+            <result name="Profesor">/profesor/Profesor.jsp</result>
+            <result name="Alumno">/alumno/Alumno.jsp</result>
             <result name="Fracaso">/Error.jsp</result>
         </action>
         <action name="RegistraAction" class="com.geolitic.model.RegistraAction">            
@@ -25,16 +25,26 @@
             <result name="Fallo">/Fallo.jsp</result>            
         </action>                                       
         <action name="ExtraccionAction" class="com.geolitic.model.ExtraccionAction" method="usuarios">
-	    <result name="tabla">/Administrador.jsp</result>
-	</action>
+	    <result name="tabla">/administrador/Administrador.jsp</result>
+	</action>        
         <action name="Eliminar" class="com.geolitic.model.Eliminar" method="eliminar">
             <result name="eliminado" type="redirectAction">ExtraccionAction</result>
 	</action>
         <action name="Modificar" class="com.geolitic.model.Modificar" method="modificar">
-            <result name="datos">/ModificarUser.jsp</result>
+            <result name="datos">/administrador/ModificarUser.jsp</result>
 	</action>
         <action name="ActualizaAction" class="com.geolitic.model.ActualizaAction" method="actualizar">
             <result name="actualizado" type="redirectAction">ExtraccionAction</result>
 	</action>
+        <action name="rectaAction" class="com.geolitic.model.rectaAction">
+            <result name="figura">/profesor/recta1.jsp</result>
+            
+        </action> 
+        <action name="circunferenciaAction" class="com.geolitic.model.circunferenciaAction">
+            <result name="figura1">/profesor/circunferencia1.jsp</result>
+        </action> 
+         <action name="parabolaAction" class="com.geolitic.model.parabolaAction">
+            <result name="figura2">/profesor/parabola1.jsp</result>
+         </action>
     </package>    
 </struts>
